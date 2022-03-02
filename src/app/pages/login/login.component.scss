@@ -1,0 +1,69 @@
+.container{
+  display: flex;
+  height: 100vh;
+  .image{
+      flex: 1;
+      img{
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          width: 100%;
+      }
+  }
+  .form-container{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .title{
+          font-size: 2rem;
+      }
+      form{
+          display: flex;
+  flex-direction: column;
+      }
+      mat-form-field{
+          min-width: 350px;
+          margin-bottom: 15px;
+      }
+      .forget-password{
+        text-align: end;
+        margin-bottom: 10px;
+      }
+      .actions{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button{
+          margin: 5px;
+        }
+      }
+      mat-card{
+        text-align: center;
+        padding: 15px;
+        width: 80%;
+        mat-card-title{
+          font-size: 30px;
+          padding: 15px;
+        }
+        mat-card-content{
+          font-size: 18px;
+          padding: 15px;
+        }
+        mat-card-actions{
+          padding: 15px;
+          button{
+            font-size: 16px;
+          }
+        }
+      }
+
+  }
+}
+.credentials-error{
+  text-align: center;
+}
+.error{
+  color: red;
+}

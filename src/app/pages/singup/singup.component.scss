@@ -1,0 +1,71 @@
+.container{
+    display: flex;
+    height: 100vh;
+    .image{
+        flex: 1;
+        img{
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            width: 100%;
+        }
+    }
+    .form-container{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .title{
+            font-size: 2rem;
+        }
+        form{
+            display: flex;
+    flex-direction: column;
+        }
+        mat-form-field{
+            min-width: 350px;
+            margin-bottom: 15px;
+        }
+        .actions{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button{
+            margin: 10px;
+          }
+        }
+    }
+}
+
+mat-card{
+  text-align: center;
+  padding: 15px;
+  mat-card-title{
+    font-size: 30px;
+    padding: 15px;
+  }
+  mat-card-content{
+    font-size: 18px;
+    padding: 15px;
+  }
+  mat-card-actions{
+    padding: 15px;
+    button{
+      font-size: 16px;
+    }
+  }
+}
+
+// .result-card {
+//   // background-color: white;
+//   padding: 2rem;
+// }
+
+// .result-container {
+//   box-shadow: 0 4px 5px -1px rgba(74, 85, 104, 0.1), 0 -1px 5px -1px rgba(74, 85, 104, 0.1);
+//   width: 80%;
+//   margin: auto;
+//   background-color: white;
+//   border-radius: 5px;
+// }

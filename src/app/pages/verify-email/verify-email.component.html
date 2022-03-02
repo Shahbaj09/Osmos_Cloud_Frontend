@@ -1,0 +1,33 @@
+<div class="container">
+  <ng-container *ngIf="isVerifyDone === true">
+    <mat-card class="success-card">
+      <mat-card-title>Success</mat-card-title>
+      <mat-card-content>
+        <p>Email Verified Successfully!</p>
+        <p>Please Login To Continue</p>
+      </mat-card-content>
+      <mat-divider inset></mat-divider>
+      <mat-card-actions>
+        <button routerLink="/login" id="basic" color="primary" type="basic" mat-raised-button >
+          Login
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+
+  <ng-container *ngIf="isVerifyDone === false">
+    <mat-card class="success-card">
+      <mat-card-title>OOP'S</mat-card-title>
+      <mat-card-content>
+        <p>Something went wrong please try again later!</p>
+      </mat-card-content>
+      <mat-divider inset></mat-divider>
+      <mat-card-actions>
+        <button routerLink="/sign-up" id="basic" color="primary" type="basic" mat-raised-button >
+          Home
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>
+

@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="image">
+    <img src="./assets/images/login.svg">
+  </div>
+
+  <div class="form-container">
+    <ng-container *ngIf="formType==='a'">
+      <h2 class="title">Login</h2>
+      <form [formGroup]="LoginForm">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" formControlName="email" required>
+          <mat-error *ngIf="f['email']?.errors?.['required']">Email is required! </mat-error>
+          <mat-error *ngIf="f['email']?.errors?.['email']">Invalid email! </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Enter Password</mat-label>
+          <input type="password" matInput formControlName="password" required>
+          <mat-error *ngIf="f['password']?.errors?.['required']">Password is required! </mat-error>
+        </mat-form-field>
+        <div *ngIf="serverError" class="credentials-error">
+          <p class="error">{{serverError}}</p>
+        </div>
+        <div class="forget-password">
+          <a href="javascript:void(0)" (click)="changeForm('b')">Forgot Password?</a>
+        </div>
+        <div class="actions">
+          <button (click)="login()" id="basic" color="primary" type="basic" mat-raised-button
+            [disabled]="!LoginForm.valid">
+            Login
+          </button>
+        </div>
+        <div class="mt-1">Don't have an account? <a href="javascript:void(0)" routerLink="/" color="primary">
+            Create an account
+          </a></div>
+      </form>
+    </ng-container>
+
+    <ng-container *ngIf="formType === 'b'">
+      <h2 class="title">Forgot Password</h2>
+      <form [formGroup]="VerifyEmailForm">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" formControlName="email" required>
+          <mat-error *ngIf="f['email']?.errors?.['required']">Email is required! </mat-error>
+          <mat-error *ngIf="f['email']?.errors?.['email']">Invalid email! </mat-error>
+        </mat-form-field>
+        <div *ngIf="serverError" class="credentials-error">
+          <p class="error">{{serverError}}</p>
+        </div>
+        <div class="actions">
+          <button (click)="changeForm('a')" id="basic" color="primary" type="basic" mat-raised-button>
+            Back
+          </button>
+          <button (click)="forgotPassword()" id="basic" color="primary" type="basic" mat-raised-button
+            [disabled]="!VerifyEmailForm.valid">
+            Submit
+          </button>
+        </div>
+
+      </form>
+    </ng-container>
+
+    <ng-container *ngIf="formType=='c'">
+      <mat-card class="success-card">
+        <mat-card-title>Success</mat-card-title>
+        <mat-card-content>
+          <p>{{message}}</p>
+        </mat-card-content>
+        <mat-divider inset></mat-divider>
+        <mat-card-actions>
+          <button routerLink="/sign-up" id="basic" color="primary" type="basic" mat-raised-button>
+            Home
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
+  </div>
+</div>

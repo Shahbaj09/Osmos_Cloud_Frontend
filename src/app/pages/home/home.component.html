@@ -1,0 +1,17 @@
+<div class="container">
+  <ng-container>
+    <mat-card class="success-card">
+      <mat-card-title>Welcome</mat-card-title>
+      <mat-card-content>
+        <p>Hi {{userData?.fullName}}</p>
+        <p>Good to have you onboard</p>
+      </mat-card-content>
+      <mat-divider inset></mat-divider>
+      <mat-card-actions>
+        <button (click)="logout()" id="basic" color="primary" type="basic" mat-raised-button >
+          Logout
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>

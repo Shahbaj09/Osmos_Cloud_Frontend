@@ -1,0 +1,28 @@
+
+.container{
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mat-card{
+    text-align: center;
+    padding: 15px;
+    mat-card-title{
+      font-size: 30px;
+      padding: 15px;
+    }
+    mat-card-content{
+      font-size: 18px;
+      padding: 15px;
+    }
+    mat-card-actions{
+      padding: 15px;
+      button{
+        font-size: 16px;
+      }
+    }
+  }
+}
+
